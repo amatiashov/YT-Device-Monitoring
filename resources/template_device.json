@@ -1,0 +1,7 @@
+{
+    "name": "template_device",
+    "ip": "192.168.1.1",
+    "notification": "disable",
+    "monitoring": "enable",
+    "index": 1
+}

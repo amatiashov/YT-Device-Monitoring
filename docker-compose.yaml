@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  device-monitoring:
+    image: artemprojects/device-monitoring
+    volumes:
+      - "./devices:/usr/src/app/resources/devices"
+    restart: always
+    ports:
+      - 127.0.0.1:8080:8080
+    environment:
+      - DEMO_MODE=disable
+      - MOCK_DATA_COUNT=20
+      - DISCOVERY_WORKER_POOL=20
+      - LOG_MODE=dev
+      - TZ=Europe/Moscow
+      - DISCOVERY_PERIOD_SEC=30
+      - EXECUTOR_SERVICE_IMPL=PingExecutorService
